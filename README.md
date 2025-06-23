@@ -81,15 +81,17 @@
 
 1. **Clone or Download**  
    ```bash
-   git clone https://github.com/YourUsername/PANDTRACK.git
-Or download and extract the ZIP into your web server’s document root (e.g., C:\wamp64\www\).
-2.Move Files
-oEnsure the entire project folder (pandtrack/) is inside www/ (for WAMP) or htdocs/ (for XAMPP).
-oThe final path should look like:
+      git clone https://github.com/AthulKrishnaG/Pandtrack.git
+Or download and extract the ZIP into your web server’s document root (e.g., C:\wamp64\www\)
 
-oC:\wamp64\www\pandtrack\  
-o.vscode
-oajax-load
+2.Move Files
+o  Ensure the entire project folder (pandtrack/) is inside www/ (for WAMP) or htdocs/ (for XAMPP).
+o  The final path should look like:
+
+o  C:\wamp64\www\pandtrack\  
+
+o  .vscode
+o  ajax-load
 o  ├─ css\  
 o  ├─ fonts\  
 o  ├─ HTML\  
@@ -112,12 +114,13 @@ o  ├─ phpcodes-Login.php
 o  ├─ phpcodes-Update.php  
 o  ├─ register.php  
 o  └─ success.php  
-3.Start WAMP/XAMPP
-oRun the application.
-oStart Apache and MySQL services.
+
+3. Start WAMP/XAMPP
+   o Run the application.
+   o Start Apache and MySQL services.
 4.Import Database
-oOpen phpMyAdmin (http://localhost/phpmyadmin).
-oCreate a new database named pantra.
+   o Open phpMyAdmin (http://localhost/phpmyadmin).
+   o Create a new database named pantra.
 oClick Import → Choose File → select pantra.sql (provided in the database/ folder) → Import.
 oThis will create all necessary tables with default data.
 5.Configure dbconnection.php
