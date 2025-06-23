@@ -21,24 +21,24 @@
 ## Features
 
 - **Admin**  
-  - Manage Patients (add, view, edit, delete) 
-  - Manage Source info (add, view, edit, delete)
+ 	   - Manage Patients (add, view, edit, delete) 
+  	  - Manage Source info (add, view, edit, delete)
 - Manage Contact info (add, view, edit, delete) 
 - Manage Primary Contact info (add, edit, update, delete)
 - Manage Patients Medicine History (add, edit, update, delete)
-  - Manage users (add, view, update, delete)  
-  - Configure doctor types and assign duty (add, view, edit, delete)  
+  	  - Manage users (add, view, update, delete)  
+  	  - Configure doctor types and assign duty (add, view, edit, delete)  
 - Manage Discharge info (add, view, edit, delete)
 - Manage Disease (add, view, edit, delete)
 - Manage Symptoms (add, view, edit, delete)
 - Manage Medicines (add, view, edit, delete)
 - Manage hotspot areas (add, view, edit, delete)
-  - View/update/delete any record in the system  
+  	  - Add/View/update/delete any record in the system  
 
 - **Doctor**  
   
-  - Login and add/view/edit, delete) patient details (Patient info, Medicine history, Discharge details)  
-  - Manage consultation schedules (Add/view, edit, delete) 
+  	- Login and add/view/edit, delete) patient details (Patient info, Medicine history, Discharge details)  
+  	- Manage consultation schedules (Add/view, edit, delete) 
 - Manage Disease (add, view, edit, delete)
 - Manage Symptoms (add, view, edit, delete)
 - Manage Medicines (add, view, edit, delete)
@@ -47,14 +47,14 @@
 
 - **Patient**  
 
-  - Register and login  
-  - View personal consultation history, medicine history 
-  - Share disease details (source, contact list, Primary Contact info)  
-  - View/Edit Profile
+    - Register and login  
+    - View personal consultation history, medicine history 
+    - Share disease details (source, contact list, Primary Contact info)  
+    - View/Edit Profile
 
-- **Other**  
+ **Other**  
 
-  - Reports of hotspot areas 
+    - Reports of hotspot areas 
 - List of Doctors
 
   - Role‐based access control: each user sees only what their role permits  
@@ -81,17 +81,15 @@
 
 1. **Clone or Download**  
    ```bash
-      git clone https://github.com/AthulKrishnaG/Pandtrack.git
-Or download and extract the ZIP into your web server’s document root (e.g., C:\wamp64\www\)
-
+git clone https://github.com/AthulKrishnaG/Pandtrack.git
+Or download and extract the ZIP into your web server’s document root (e.g., C:\wamp64\www\).
 2.Move Files
-o  Ensure the entire project folder (pandtrack/) is inside www/ (for WAMP) or htdocs/ (for XAMPP).
-o  The final path should look like:
+oEnsure the entire project folder (pandtrack/) is inside www/ (for WAMP) or htdocs/ (for XAMPP).
+oThe final path should look like:
 
-o  C:\wamp64\www\pandtrack\  
-
-o  .vscode
-o  ajax-load
+oC:\wamp64\www\pandtrack\  
+o.vscode
+oajax-load
 o  ├─ css\  
 o  ├─ fonts\  
 o  ├─ HTML\  
@@ -114,13 +112,12 @@ o  ├─ phpcodes-Login.php
 o  ├─ phpcodes-Update.php  
 o  ├─ register.php  
 o  └─ success.php  
-
-3. Start WAMP/XAMPP
-   o Run the application.
-   o Start Apache and MySQL services.
+3.Start WAMP/XAMPP
+oRun the application.
+oStart Apache and MySQL services.
 4.Import Database
-   o Open phpMyAdmin (http://localhost/phpmyadmin).
-   o Create a new database named pantra.
+oOpen phpMyAdmin (http://localhost/phpmyadmin).
+oCreate a new database named pantra.
 oClick Import → Choose File → select pantra.sql (provided in the database/ folder) → Import.
 oThis will create all necessary tables with default data.
 5.Configure dbconnection.php
@@ -195,10 +192,25 @@ Usage
 1.Admin Login
 oGo to http://localhost/pandtrack/login.php  
 oEnter Admin credentials (admin@gmail.com / admin).
-oAfter logging in, the Admin dashboard shows options to manage patient, source, users, hotspots areas, contacts, primary contact,  schedule doctor, discharge, disease, symptoms, medicines . 
-2.Doctor Registration & Approval
+oAfter logging in, the Admin dashboard shows options to manage patient, source, contacts, primary contact, patient’s medical history, users, schedule duty of doctor, discharge, disease, symptoms, medicines and hotspots areas. 
+2.Doctor Registration &  Usage
 oA new doctor visits http://localhost/pandtrack/login.php. 
-oAdmin can add doctors and the email id , phone number are the doctor login credentials
+oAdmin can add doctors and the email id  &  phone number are the doctor login credentials.
+oDoctor can manage patient, patient’s medical history, users, schedule duty of doctor, discharge, disease, symptoms, medicines and hotspots areas. 
+oDoctor can view source, contacts and primary contact.
 3.Patient Registration & Usage
 oA new patient visits register.php, signs up, and logs in immediately (no approval needed).
-oPatient dashboard allows viewing consultation history, medicine history, and adding source/contact/primary contact details.
+oPatient dashboard allows add/view : source/contact/primary contact details. 
+oPatient can view medicine history, discharge details, disease, symptoms, medicines and hotspots areas.
+oThey can update personal profile
+
+Roles & Permissions
+1.Admin
+oFull access: Manage users (doctors/patients), hotspots, contacts, doctor types.
+oAdd/view/edit/delete any record in the system.
+2.Doctor
+oAdd/view patient details, symptoms, medication history.
+oAdd/view list of all doctors (including consultation schedules).
+3.Patient
+oView personal consultation/medicine history.
+oView disease/symptom/medicine details.
