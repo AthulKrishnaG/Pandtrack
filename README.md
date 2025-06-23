@@ -27,7 +27,7 @@
 - Manage Primary Contact info (add, edit, update, delete)
 - Manage Patients Medicine History (add, edit, update, delete)
   	  - Manage users (add, view, update, delete)  
-  	  - Configure doctor types and assign duty (add, view, edit, delete)  
+  	   - Configure doctor types and assign duty (add, view, edit, delete)  
 - Manage Discharge info (add, view, edit, delete)
 - Manage Disease (add, view, edit, delete)
 - Manage Symptoms (add, view, edit, delete)
@@ -64,13 +64,13 @@
 
 - **Language:** PHP, HTML, CSS, JavaScript  
 - **Framework/Library:** Bootstrap  
-- **Backend:** MySQL (using WAMP/XAMPP)  
+- **Backend:** MySQL
 - **IDE:** VS Code
 
 ---
 
 ## Prerequisites
-1. **Web Server:** WAMP Server (or XAMPP) installed on Windows.  
+1. **Web Server:** WAMP Server (or similar software) installed on Windows.  
 2. **PHP:** Version 8.x or above.  
 3. **MySQL:** Version 9.1 or above (ensure the `mysqli` extension is enabled).  
 4. **Browser:** Edge, Chrome, Firefox  or any modern browser.  
@@ -84,9 +84,8 @@
 git clone https://github.com/AthulKrishnaG/Pandtrack.git
 Or download and extract the ZIP into your web server’s document root (e.g., C:\wamp64\www\).
 2.Move Files
-oEnsure the entire project folder (pandtrack/) is inside www/ (for WAMP) or htdocs/ (for XAMPP).
+oEnsure the entire project folder (pandtrack/) is inside www/ (for WAMP) 
 oThe final path should look like:
-
 oC:\wamp64\www\pandtrack\  
 o.vscode
 oajax-load
@@ -112,9 +111,8 @@ o  ├─ phpcodes-Login.php
 o  ├─ phpcodes-Update.php  
 o  ├─ register.php  
 o  └─ success.php  
-3.Start WAMP/XAMPP
+3.Start WAMP
 oRun the application.
-oStart Apache and MySQL services.
 4.Import Database
 oOpen phpMyAdmin (http://localhost/phpmyadmin).
 oCreate a new database named pantra.
@@ -129,7 +127,6 @@ o$db_servername   = "localhost";
 o$db_username = "root";
 o$db_password = "";         // default is empty for WAMP
 o$db_dbname = "pantra";
-o
 o$dbconnection = mysqli_connect($db_servername, $db_username, $db_password, $db_dbname);
 oif (mysqli_connect_error()) {
 o  echo "Failed to connect to MySQL:  " . mysqli_connect_error();
@@ -186,12 +183,12 @@ Default Credentials
 Admin
 oEmail: admin@gmail.com
 oPassword: admin
-(After first login, Admin can create additional doctor or patient accounts.)
+(After first login, Admin can create additional doctor/user/ patient accounts.)
 
 Usage
 1.Admin Login
 oGo to http://localhost/pandtrack/login.php  
-oEnter Admin credentials (admin@gmail.com / admin).
+oEnter Admin credentials (user name(email id) :admin@gmail.com, password: admin).
 oAfter logging in, the Admin dashboard shows options to manage patient, source, contacts, primary contact, patient’s medical history, users, schedule duty of doctor, discharge, disease, symptoms, medicines and hotspots areas. 
 2.Doctor Registration &  Usage
 oA new doctor visits http://localhost/pandtrack/login.php. 
@@ -206,11 +203,13 @@ oThey can update personal profile
 
 Roles & Permissions
 1.Admin
-oFull access: Manage users (doctors/patients), hotspots, contacts, doctor types.
+oFull access: Manage patient, source, contacts, primary contact, patient’s medical history, users, schedule duty of doctor, discharge, disease, symptoms, medicines and hotspots areas. 
 oAdd/view/edit/delete any record in the system.
 2.Doctor
-oAdd/view patient details, symptoms, medication history.
+oAdd/view patient, patient’s medical history, users, schedule duty of doctor, discharge, disease, symptoms, medicines and hotspots areas.
+oView source, contacts and primary contact.
 oAdd/view list of all doctors (including consultation schedules).
 3.Patient
+oAdd/view : source/contact/primary contact details.
 oView personal consultation/medicine history.
-oView disease/symptom/medicine details.
+oView disease/symptom/medicine/hotspot areas.
