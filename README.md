@@ -118,7 +118,7 @@ oOpen phpMyAdmin (http://localhost/phpmyadmin).
 oCreate a new database named pantra.
 oClick Import → Choose File → select pantra.sql (provided in the database/ folder) → Import.
 oThis will create all necessary tables with default data.
-5.Configure dbconnection.php
+5.dbconnection.php *
 oOpen dbconnection.php in VS Code.
 oUpdate the MySQL credentials if necessary (default WAMP credentials):
 o<?php
@@ -133,6 +133,7 @@ o  echo "Failed to connect to MySQL:  " . mysqli_connect_error();
 o}
 o?>
 oSave and close.
+* dbconnection.php for establishing database connection are available in the required folders ( SSLA,SSLD, SSLP). So, not necessary to configure.
 6.Access the Application
 oIn your browser, navigate to http://localhost/pandtrack 
 oYou should see the landing page 
